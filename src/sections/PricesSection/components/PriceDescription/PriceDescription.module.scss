@@ -1,0 +1,210 @@
+.root {
+  color: var(--light-black);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.circle {
+  background-color: var(--dark-blue-60);
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-items: center;
+  padding: 1.8rem 3.6rem;
+  position: relative;
+}
+
+.header {
+  font-size: 1.1rem;
+}
+
+.headerFBS {
+  color: var(--white);
+}
+
+.headerAsterisk {
+  color: var(--pink);
+}
+
+.priceBlock {
+  position: relative;
+}
+
+.price {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.includedInPrice {
+  font-size: 1rem;
+  position: absolute;
+}
+
+.assembling:before,
+.wrapping:before,
+.delivery:before {
+  content: '';
+  background-color: var(--light-black);
+  width: 2px;
+  height: 2.5rem;
+  position: absolute;
+}
+
+.assembling {
+  bottom: -3rem;
+  left: -8rem;
+
+  &:before {
+    transform: rotate(60deg);
+    top: -2rem;
+    left: 5.5rem;
+  }
+}
+
+.wrapping {
+  bottom: -4rem;
+
+  &:before {
+    left: 50%;
+    bottom: 130%;
+    height: 2rem;
+  }
+}
+
+.delivery {
+  width: 7.2rem;
+  bottom: -4rem;
+  right: -10rem;
+
+  &:before {
+    transform: rotate(-60deg);
+    top: -2rem;
+    left: -1.5rem;
+  }
+}
+
+.box {
+  position: absolute;
+}
+
+.box1,
+.box3,
+.box6,
+.box7,
+.box8 {
+  path {
+    stroke: var(--dark-blue);
+  }
+}
+
+.box2,
+.box7 {
+  path {
+    stroke: var(--orange);
+  }
+}
+
+.box4,
+.box5 {
+  path {
+    stroke: var(--white);
+  }
+}
+
+.boxesLeft {
+  position: absolute;
+  left: 0;
+
+  .box1 {
+    width: 1.8rem;
+    height: 1.8rem;
+    transform: rotate(-139.488deg);
+    left: -6rem;
+    top: 3rem;
+  }
+
+  .box2 {
+    width: 2rem;
+    height: 2rem;
+    transform: rotate(150.131deg);
+    top: 4rem;
+    left: -4rem;
+  }
+
+  .box3 {
+    width: 2.4rem;
+    height: 2.4rem;
+    transform: rotate(34.786deg);
+    top: 2rem;
+    left: -2rem;
+  }
+
+  .box4 {
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: rotate(-84.175deg);
+    opacity: 0.6;
+    top: 4.5rem;
+    left: 3.5rem;
+  }
+}
+
+.boxesRight {
+  position: absolute;
+  right: 0;
+
+  .box5 {
+    width: 1.3rem;
+    height: 1.3rem;
+    transform: rotate(107.645deg);
+    opacity: 0.6;
+    top: 5.5rem;
+    left: -5rem;
+  }
+
+  .box6 {
+    width: 2.0rem;
+    height: 2.0rem;
+    transform: rotate(107.645deg);
+    top: 7rem;
+    left: 0.5rem;
+  }
+
+  .box7 {
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: rotate(-178.745deg);
+    top: 5rem;
+    left: 2rem;
+  }
+
+  .box8 {
+    width: 1.4rem;
+    height: 1.4rem;
+    transform: rotate(-95.241deg);
+    top: 7rem;
+    left: 4.5rem;
+  }
+}
+
+.note {
+  color: var(--grey-dark);
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  align-self: end;
+}

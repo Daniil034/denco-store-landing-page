@@ -1,0 +1,70 @@
+.root {
+  margin-bottom: 1rem;
+}
+
+.title {
+  color: var(--light-black);
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 1.1rem;
+
+  &FBO {
+    color: var(--dark-blue);
+  }
+}
+
+.body {
+  display: flex;
+  gap: 2rem;
+
+  &Left {
+    flex: 1 1 0px;
+  }
+
+  &Right {
+    flex: 1 1 0px;
+  }
+}
+
+.dimensionsInfo {
+  color: var(--light-black);
+  font-size: 1.0rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0.7rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+.toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 1.8rem;
+}
+
+.button {
+  margin-left: auto;
+  margin-bottom: 0.7rem;
+}
+
+.link {
+  color: var(--dark-blue);
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+}

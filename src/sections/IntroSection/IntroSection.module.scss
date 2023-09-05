@@ -1,0 +1,99 @@
+.top {
+  color: var(--light-black);
+  position: relative;
+  padding-bottom: 9.5rem;
+}
+
+.bottom {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+}
+
+.bottomContainer {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 1.3rem 3rem;
+  background-color: var(--dark-blue-80);
+}
+
+.background {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  width: 30rem;
+  z-index: -1;
+}
+
+.header {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 18rem;
+  margin-bottom: 0.8rem;
+}
+
+.fboFbs {
+  color: var(--dark-blue);
+}
+
+.body {
+  text-shadow: 1px 6px 21px rgba(255, 255, 255, 0.39);
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 16rem;
+  position: relative;
+  padding-left: 0.5rem;
+  margin-bottom: 2.8rem;
+
+  &:before {
+    content: '';
+    width: 0.2rem;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: var(--dark-blue);
+  }
+}
+
+.marketLogos {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 2.8rem;
+}
+
+.logo {
+  width: 3rem;
+}
+
+.button {
+  width: 12.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .body {
+    font-size: 1rem;
+  }
+
+  .top {
+    padding-bottom: 12.5rem;
+  }
+
+  .bottom {
+    font-size: 1rem;
+  }
+
+  .bottomContainer {
+    padding-top: 2.66rem;
+    padding-bottom: 2.66rem;
+    border-radius: 0.3rem;
+  }
+}

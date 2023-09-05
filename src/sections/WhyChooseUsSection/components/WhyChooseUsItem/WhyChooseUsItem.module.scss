@@ -1,0 +1,47 @@
+.root {
+  color: var(--light-black);
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 38%;
+  display: grid;
+  grid-template-columns: 3rem auto;
+  grid-template-rows: min-content;
+  grid-template-areas:
+  "icon title"
+  "description description";
+  row-gap: 0.6rem;
+  column-gap: 0.8rem;
+  //align-items: center;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  grid-area: icon;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  grid-area: title;
+  align-self: center;
+}
+
+.description {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  grid-area: description;
+}
+
+
+@media screen and (min-width: 768px) {
+  .root {
+    grid-template-areas:
+  "icon title"
+  "icon description";
+  }
+}

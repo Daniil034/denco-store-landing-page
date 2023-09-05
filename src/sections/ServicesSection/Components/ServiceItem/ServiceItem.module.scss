@@ -1,0 +1,55 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: var(--light-black);
+  max-width: 22rem;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+
+}
+
+.title {
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  list-style-position: inside;
+}
+
+.listItem {
+  span {
+    position: relative;
+
+    left: -0.5rem;
+  }
+
+  &::marker {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .list {
+    font-size: 0.83rem;
+  }
+}

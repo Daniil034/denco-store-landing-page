@@ -1,0 +1,73 @@
+@import "styles/normalize";
+@import "styles/variables";
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-weight: 400;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+// Carousel arrows
+
+.slick-prev, .slick-next {
+  width: 1rem;
+  height: 1.75rem;
+}
+
+.slick-prev {
+  left: -2rem;
+}
+
+.slick-next {
+  right: -2rem;
+}
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 21.5px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 24px;
+  }
+}

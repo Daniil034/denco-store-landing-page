@@ -1,0 +1,193 @@
+.root {
+  padding: 3rem 0;
+  color: var(--light-black);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.servicesItems {
+  max-width: 310px;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  //grid-template-areas:
+  //  "reception reception reception"
+  //  "processing processing processing"
+  //  "storage storage storage"
+  //  "delivery delivery delivery";
+}
+
+.itemReception {
+  margin-bottom: 30px;
+  width: 135px;
+  grid-area: reception;
+
+  &ConnectionLineMobile {
+    position: absolute;
+    top: 90px;
+    left: 140px;
+  }
+
+  &ConnectionLineDesktop {
+    display: none;
+  }
+}
+
+
+.itemProcessing {
+  margin-left: auto;
+  width: 152px;
+  grid-area: processing;
+
+  &List {
+    padding: 8px;
+  }
+
+  &ConnectionLineMobile {
+    position: absolute;
+    bottom: -80px;
+    right: 10px;
+    z-index: 1;
+  }
+
+  &ConnectionLineDesktop {
+    display: none;
+  }
+}
+
+.itemStorage {
+  margin-bottom: 20px;
+  width: 214px;
+  grid-area: storage;
+
+  &Img {
+    margin-bottom: -20px;
+  }
+
+  &List {
+    padding: 0 57px 0 36px;
+  }
+
+  &ConnectionLineMobile {
+    position: absolute;
+    right: -55px;
+    top: 180px;
+    z-index: 2;
+  }
+
+  &ConnectionLineDesktop {
+    display: none;
+  }
+}
+
+.itemDelivery {
+  margin-left: auto;
+  width: 219px;
+  grid-area: delivery;
+
+  &List {
+    padding: 0 20px 0 23px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .servicesItems {
+    display: grid;
+    max-width: 85%;
+    flex-wrap: wrap;
+    column-gap: 20%;
+    justify-content: space-between;
+    row-gap: 2rem;
+    grid-template-areas:
+    "reception processing"
+    "delivery storage";
+  }
+
+  .itemReception {
+    margin-bottom: 3rem;
+    width: unset;
+    grid-area: reception;
+
+    &ConnectionLineMobile {
+      display: none;
+    }
+
+    &ConnectionLineDesktop {
+      width: 100%;
+      //max-width: 400px;
+      position: absolute;
+      display: unset;
+      right: -75%;
+      top: 50%;
+      //transform: translate(70%, -50%);
+    }
+  }
+
+  .itemProcessing {
+    width: unset;
+    grid-area: processing;
+
+    &List {
+      padding: 0.8rem;
+    }
+
+    &ConnectionLineMobile {
+      display: none;
+    }
+
+    &ConnectionLineDesktop {
+      height: 60%;
+      position: absolute;
+      display: unset;
+      right: -10%;
+      bottom: 10%;
+      transform: translateY(50%);
+    }
+  }
+
+  .itemStorage {
+    margin-bottom: 2rem;
+    margin-top: -2rem;
+    width: unset;
+    grid-area: storage;
+    justify-self: end;
+
+    &Img {
+      margin-bottom: -2rem;
+    }
+
+    &List {
+      padding: 0 3.6rem;
+    }
+
+    &ConnectionLineMobile {
+      display: none;
+    }
+
+    &ConnectionLineDesktop {
+      position: absolute;
+      display: unset;
+      width: 50%;
+      left: 0;
+      top: 50%;
+      transform: translateX(-100%);
+    }
+  }
+
+  .itemDelivery {
+    width: unset;
+    grid-area: delivery;
+    justify-self: start;
+
+    &List {
+      padding: 0 2rem;
+    }
+  }
+}
