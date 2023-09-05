@@ -13,12 +13,14 @@ import {
 } from "shared/assets/icons/processingToStorageLineDesktop.svg";
 import {ReactComponent as StorageToDeliveryLineMobile} from "shared/assets/icons/storageToDeliveryLine.svg";
 import {ReactComponent as StorageToDeliveryLineDesktop} from "shared/assets/icons/storageToDeliveryLineDesktop.svg";
+import deliveryGuy from "shared/assets/images/deliveryGuy.png";
 import {Container} from "../../shared/ui/Container/Container";
 import styles from './ServicesSection.module.scss';
 
 export function ServicesSection() {
     return (
         <section className={styles.root}>
+            <span id="services" className={styles.anchor}/>
             <Container>
                 <h3 className={styles.title}>Наши услуги</h3>
                 <div className={styles.servicesItems}>
@@ -82,6 +84,7 @@ const ReceptionToProcessingLine = ({mobile, desktop}: { mobile: string, desktop:
         <>
             <ReceptionToProcessingLineMobile className={mobile}/>
             <ReceptionToProcessingLineDesktop className={desktop}/>
+            <img className={styles.deliveryGuyImgMobile} src={deliveryGuy} alt="Курьер с посылками"/>
         </>
     )
 }
@@ -100,6 +103,7 @@ const StorageToDeliveryLine = ({mobile, desktop}: { mobile: string, desktop: str
         <>
             <StorageToDeliveryLineMobile className={mobile}/>
             <StorageToDeliveryLineDesktop className={desktop}/>
+            <img className={styles.deliveryGuyImgMobileReverse} src={deliveryGuy} alt="Курьер с посылками"/>
         </>
     )
 }

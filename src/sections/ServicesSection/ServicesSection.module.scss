@@ -3,6 +3,11 @@
   color: var(--light-black);
 }
 
+.anchor {
+  position: absolute;
+  transform: translateY(-6.5rem);
+}
+
 .title {
   font-size: 1.5rem;
   font-style: normal;
@@ -17,11 +22,6 @@
   margin: 0 auto;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  //grid-template-areas:
-  //  "reception reception reception"
-  //  "processing processing processing"
-  //  "storage storage storage"
-  //  "delivery delivery delivery";
 }
 
 .itemReception {
@@ -38,6 +38,18 @@
   &ConnectionLineDesktop {
     display: none;
   }
+}
+
+.deliveryGuyImgMobile {
+  position: absolute;
+  width: 80px;
+  top: 90px;
+  left: 140px;
+  z-index: -1;
+}
+
+.deliveryGuyImgMobileReverse {
+  display: none;
 }
 
 
@@ -128,6 +140,23 @@
       top: 50%;
       //transform: translate(70%, -50%);
     }
+  }
+
+  .deliveryGuyImgMobile {
+    position: absolute;
+    width: 50%;
+    top: 30%;
+    left: 105%;
+  }
+
+  .deliveryGuyImgMobileReverse {
+    display: unset;
+    transform: scaleX(-1);
+    position: absolute;
+    width: 50%;
+    top: 30%;
+    left: -50%;
+    z-index: -1;
   }
 
   .itemProcessing {

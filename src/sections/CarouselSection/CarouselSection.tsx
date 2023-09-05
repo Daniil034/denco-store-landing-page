@@ -27,6 +27,7 @@ export function CarouselSection() {
 
     return (
         <section>
+            <span className={styles.anchor} id="personalAccount"></span>
             <Container>
                 <div className={styles.container}>
                     <h2 className={styles.title}>Личный кабинет</h2>

@@ -2,6 +2,11 @@
   margin-bottom: 1rem;
 }
 
+.anchor {
+  position: absolute;
+  transform: translateY(-6.5rem);
+}
+
 .title {
   color: var(--light-black);
   font-size: 1.1rem;

@@ -15,7 +15,7 @@ const LINKS = [
     },
     {
         label: "Калькулятор",
-        link: "#Calculator"
+        link: "#calculator"
     }
 ]
 

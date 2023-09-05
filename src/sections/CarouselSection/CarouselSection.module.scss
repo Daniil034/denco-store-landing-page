@@ -1,6 +1,11 @@
+.anchor {
+  position: absolute;
+  transform: translateY(-6.5rem);
+}
+
 .container {
   margin-bottom: 2rem;
-  padding: 0 5rem;
+  padding: 0 1rem;
 }
 
 .title {
@@ -21,4 +26,10 @@
   line-height: normal;
   text-align: center;
   margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    padding: 0 5rem;
+  }
 }

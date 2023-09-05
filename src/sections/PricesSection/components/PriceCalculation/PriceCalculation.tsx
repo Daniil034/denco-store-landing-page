@@ -46,6 +46,7 @@ export function PriceCalculation() {
 
     return (
         <div className={styles.root}>
+            <span id="calculator" className={styles.anchor}/>
             <h3 className={styles.title}>Рассчитать стоимость товара по системе <span
                 className={styles.titleFBO}>FBO</span></h3>
             <div className={styles.body}>
