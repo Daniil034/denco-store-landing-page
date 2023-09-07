@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import {ComponentProps} from "react";
+import {ComponentProps, ReactElement, ReactNode, useState} from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import mainPage from 'shared/assets/images/mainPage.png';
@@ -13,16 +13,26 @@ import {ReactComponent as SliderArrowLeft} from "shared/assets/icons/sliderArrow
 import {ReactComponent as SliderArrowRight} from "shared/assets/icons/sliderArrowRight.svg";
 import styles from './CarouselSection.module.scss';
 import {Container} from "../../shared/ui/Container/Container";
+import {SLIDER_ELEMENTS} from "./config";
+import {Modal} from "./components/Modal/Modal";
+
+const settings: ComponentProps<typeof Slider> = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    lazyLoad: 'ondemand',
+    prevArrow: <SliderArrowLeft/>,
+    nextArrow: <SliderArrowRight/>
+}
 
 export function CarouselSection() {
-    const settings: ComponentProps<typeof Slider> = {
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        lazyLoad: 'ondemand',
-        prevArrow: <SliderArrowLeft/>,
-        nextArrow: <SliderArrowRight/>
+    const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+
+    console.log(selectedImageIndex)
+
+    const handleImageClick = (imageIndex: number) => {
+        setSelectedImageIndex(imageIndex);
     }
 
     return (
@@ -32,37 +42,22 @@ export function CarouselSection() {
                 <div className={styles.container}>
                     <h2 className={styles.title}>Личный кабинет</h2>
                     <Slider {...settings}>
-                        <figure>
-                            <img src={mainPage} alt="Главная страница админ панели"/>
-                            <figcaption className={styles.figcaption}>Главная</figcaption>
-                        </figure>
-                        <figure>
-                            <img src={ordersPage} alt="Страница заказов"/>
-                            <figcaption className={styles.figcaption}>Заказы</figcaption>
-                        </figure>
-                        <figure>
-                            <img src={itemsPage} alt="Страница товаров пользователя"/>
-                            <figcaption className={styles.figcaption}>Товары</figcaption>
-                        </figure>
-                        <figure>
-                            <img src={tablePage} alt="Страница всех товаров"/>
-                            <figcaption className={styles.figcaption}>Таблица</figcaption>
-                        </figure>
-                        <figure>
-                            <img src={statisticsPage} alt="Страница статистики продаж"/>
-                            <figcaption className={styles.figcaption}>Статистика</figcaption>
-                        </figure>
-                        <figure>
-                            <img src={pricesPage} alt="Страница применения цен"/>
-                            <figcaption className={styles.figcaption}>Цены</figcaption>
-                        </figure>
-                        <figure>
-                            <img src={accountBalancePage} alt="Страница баланса аккаунта"/>
-                            <figcaption className={styles.figcaption}>Баланс</figcaption>
-                        </figure>
+                        {SLIDER_ELEMENTS.map((sliderElement, index) => (
+                            <figure>
+                                <img className={styles.image} src={sliderElement.src} alt={sliderElement.alt}
+                                     onClick={() => handleImageClick(index)}/>
+                                <figcaption className={styles.figcaption}>{sliderElement.label}</figcaption>
+                            </figure>
+                        ))}
                     </Slider>
                 </div>
+                {selectedImageIndex !== null && (
+                    <Modal onClose={() => setSelectedImageIndex(null)}>
+                        <img className={styles.imageOpen} src={SLIDER_ELEMENTS[selectedImageIndex].src}
+                             alt={SLIDER_ELEMENTS[selectedImageIndex].alt}/>
+                    </Modal>
+                )}
             </Container>
         </section>
     );
-};
+}

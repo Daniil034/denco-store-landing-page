@@ -1,0 +1,13 @@
+.root {
+  background-color: var(--modal-background);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.container {
+  padding: 0 1rem 0;
+}

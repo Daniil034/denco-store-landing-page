@@ -4,9 +4,11 @@ import styles from './PriceCalculation.module.scss';
 import {Input} from "../Input/Input";
 import {ToggleBlock, ToggleBlockProps} from "../ToggleBlock/ToggleBlock";
 import {Button} from "../../../../shared/ui/Button/Button";
+import {FinalPrice} from "../FinalPrice/FinalPrice";
 
 export function PriceCalculation() {
     const [isBoxToggleChecked, setIsBoxToggleChecked] = useState(false);
+    const [finalPriceValue, setFinalPriceValue] = useState(0);
 
     const toggles = useMemo<ToggleBlockProps[]>(() => [
         {
@@ -73,11 +75,16 @@ export function PriceCalculation() {
                             />
                         ))}
                     </div>
-                    <Button paddingSize="small" className={styles.button}>Рассчитать</Button>
+                    {finalPriceValue > 0 ? (
+                        <FinalPrice price={finalPriceValue}/>
+                    ) : (
+                        <Button paddingSize="small" className={styles.button}
+                                onClick={() => setFinalPriceValue(100)}>Рассчитать</Button>
+                    )}
                     <a href="/" className={styles.link}>Полный пакет услуг</a>
                 </div>
             </div>
         </div>
     );
-};
+}
 

@@ -1,15 +1,15 @@
-import {ReactNode} from "react";
+import {ComponentProps, ReactNode} from "react";
 import styles from './Button.module.scss';
 import classNames from "classnames";
 
-type Props = {
+interface Props extends ComponentProps<'button'> {
     children: ReactNode,
     className?: string,
-    paddingSize?: 'small' | 'big'
+    paddingSize?: 'small' | 'big',
 }
 
 export function Button(props: Props) {
-    const {children, className, paddingSize = 'small'} = props;
+    const {children, className, paddingSize = 'small', ...restProps} = props;
 
 
     return (
@@ -20,8 +20,10 @@ export function Button(props: Props) {
                     [styles.paddingBig]: paddingSize === 'big'
                 },
                 className
-            )}>
+            )}
+            {...restProps}
+        >
             {children}
         </button>
     );
-};
+}
