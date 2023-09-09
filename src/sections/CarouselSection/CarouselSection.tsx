@@ -41,7 +41,7 @@ export function CarouselSection() {
                     <h2 className={styles.title}>Личный кабинет</h2>
                     <Slider {...settings}>
                         {SLIDER_ELEMENTS.map((sliderElement, index) => (
-                            <figure>
+                            <figure key={sliderElement.label}>
                                 <img className={styles.image} src={sliderElement.src} alt={sliderElement.alt}
                                      onClick={() => handleImageClick(index)}/>
                                 <figcaption className={styles.figcaption}>{sliderElement.label}</figcaption>

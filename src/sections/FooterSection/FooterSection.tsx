@@ -9,14 +9,14 @@ export function FooterSection() {
             <div className={styles.top}>
                 <div className={styles.companyInfo}>
                     <DencoLogo className={styles.logo}/>
-                    <a href="tel:+79000000000">+7(900)000-00-00</a>
-                    <a href="mailto:email110@gmail.com">email110@gmail.com</a>
+                    <a href="tel:+79935512602">+7 993 551-26-02</a>
+                    <a href="mailto:info@denco.store">info@denco.store</a>
                 </div>
                 <div className={styles.links}>
-                    <a href="/">
+                    <a href="https://wa.me/79951541493">
                         <WhatsappLogo className={styles.whatsapp}/>
                     </a>
-                    <a href="/">
+                    <a href="https://t.me/dencofulfillmant_manager">
                         <TelegramLogo className={styles.telegram}/>
                     </a>
                 </div>

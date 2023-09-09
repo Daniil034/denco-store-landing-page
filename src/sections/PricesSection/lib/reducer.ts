@@ -13,7 +13,7 @@ type FormData = {
     inputs: Record<InputId, string>,
     toggles: {
         main: Record<ToggleId, Toggle>,
-        subtoggles: Record<SubtoggleId, Toggle>
+        subtoggles: Record<SubtoggleId, Toggle>,
     }
 }
 
@@ -36,12 +36,12 @@ export const formInitialState: FormData = {
             }
         },
         subtoggles: {
-            additionalLabel: {
-                label: 'Дополнительная маркировка',
-                value: false
-            },
             boppBag: {
                 label: 'БОПП пакет + упаковка',
+                value: false
+            },
+            additionalLabel: {
+                label: 'Дополнительная маркировка',
                 value: false
             },
             bubbleMembrane: {
@@ -110,8 +110,8 @@ export const formReducer = (state: FormData, action: Action): FormData => {
                         ...state.toggles,
                         subtoggles: {
                             ...state.toggles.subtoggles,
-                            additionalLabel: {
-                                ...state.toggles.subtoggles.additionalLabel,
+                            boppBag: {
+                                ...state.toggles.subtoggles.boppBag,
                                 value: true
                             }
                         }

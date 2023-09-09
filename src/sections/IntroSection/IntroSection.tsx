@@ -24,7 +24,11 @@ export function IntroSection() {
                         <img className={styles.logo} src={YandexLogo} alt="Логотип Yandex market"/>
                         <img className={styles.logo} src={OzonLogo} alt="Логотип Ozon"/>
                     </div>
-                    <Button paddingSize="big" className={styles.button}>Стать клиентом</Button>
+                    <a href={"https://t.me/dencofulfillmant_manager"}>
+
+                        <Button paddingSize="big" className={styles.button}>Стать клиентом</Button>
+                    </a>
+
                     <img src={Background} className={styles.background}/>
                 </Container>
             </div>

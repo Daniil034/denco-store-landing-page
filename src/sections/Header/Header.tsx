@@ -55,7 +55,7 @@ export function Header() {
                             ))}
                         </ul>
                     </nav>
-                    <a href="/">
+                    <a href="https://t.me/dencofulfillmant_manager">
                         <TelegramLogo className={styles.telegramLogo}/>
                     </a>
                 </div>

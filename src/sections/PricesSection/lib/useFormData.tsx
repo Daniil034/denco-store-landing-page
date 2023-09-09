@@ -26,9 +26,7 @@ export function useFormData() {
     const inputs = useMemo(() => {
         return Object.entries(formData.inputs).map(([inputKey, value]) => (
             <Input
-                // type="number"
-                // pattern=" 0+\.[0-9]*[1-9][0-9]*$"
-                // pattern="[0-9]*"
+                key={inputKey}
                 value={value}
                 placeholder={placeholders[inputKey as InputId]}
                 onChange={e => handleInput(inputKey as InputId, e.target.value)}
@@ -40,6 +38,7 @@ export function useFormData() {
     const toggles = useMemo(() => {
         const toggles = Object.entries(formData.toggles.main).filter(([key]) => key !== 'subtoggles').map(([key, value]) => (
             <ToggleBlock
+                key={key}
                 label={value.label}
                 id={key}
                 checked={value.value}
@@ -50,6 +49,7 @@ export function useFormData() {
         const subtoggleValues = Object.values(subtoggles).map(subtoggle => subtoggle.value);
         toggles.unshift(
             <ToggleBlock
+                key={"wrapping"}
                 checked={subtoggleValues.some(value => value)}
                 label="Упаковка"
                 id="wrapping"
