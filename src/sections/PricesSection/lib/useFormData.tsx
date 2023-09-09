@@ -11,7 +11,6 @@ export function useFormData() {
         if (value.charCodeAt(value.length - 1) < 48 || value.charCodeAt(value.length - 1) > 57) {
             return;
         }
-        console.log('set')
         setFormData({type: 'changeInput', payload: {id: field, value}})
     }
 
@@ -23,8 +22,6 @@ export function useFormData() {
             count: 'Количество товара, шт'
         }
     }, [])
-
-    console.log(formData.inputs);
 
     const inputs = useMemo(() => {
         return Object.entries(formData.inputs).map(([inputKey, value]) => (
