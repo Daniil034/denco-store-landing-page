@@ -10,7 +10,7 @@ const LINKS = [
         link: "#services"
     },
     {
-        label: "Личный кабинет",
+        label: "Кабинет",
         link: "#personalAccount"
     },
     {
