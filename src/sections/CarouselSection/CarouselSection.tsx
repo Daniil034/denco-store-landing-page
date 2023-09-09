@@ -29,8 +29,6 @@ const settings: ComponentProps<typeof Slider> = {
 export function CarouselSection() {
     const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
-    console.log(selectedImageIndex)
-
     const handleImageClick = (imageIndex: number) => {
         setSelectedImageIndex(imageIndex);
     }
