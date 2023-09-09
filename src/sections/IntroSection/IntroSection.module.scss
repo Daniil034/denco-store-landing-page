@@ -22,8 +22,10 @@
 
 .background {
   position: absolute;
+  right: 0rem;
   top: 4rem;
-  right: 2rem;
+
+
   width: 30rem;
   z-index: -1;
 }
@@ -85,6 +87,13 @@
 
   .top {
     padding-bottom: 12.5rem;
+  }
+
+  .background {
+
+    top: 0rem;
+    right: 4rem;
+
   }
 
   .bottom {
